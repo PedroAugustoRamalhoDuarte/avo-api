@@ -7,7 +7,7 @@ module Avo::Api
 
       def as_json
         get_fields.map do |field|
-          [field.name, field.value]
+          [field.id, field.value]
         end.to_h
       end
     end

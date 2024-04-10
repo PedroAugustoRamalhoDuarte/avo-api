@@ -31,9 +31,9 @@ RSpec.describe "Resource#to_json" do
   it "returns the right" do
     resource = Resource.new.hydrate(record: User.new(id: 1, name: "Name"), view: :show).detect_fields
     expect(JSON.parse(resource.to_json)).to eq({
-                                                 "Id" => 1,
-                                                 "Name" => "Name",
-                                                 "Formatted name" => "Formatted Name"
+                                                 "id" => 1,
+                                                 "name" => "Name",
+                                                 "formatted_name" => "Formatted Name"
                                                })
   end
 
