@@ -5,7 +5,6 @@ require "spec_helper"
 RSpec.describe "ResourceController", type: :request do
   describe "GET transactions/id" do
     it "returns http success" do
-      puts "VERSÂO DO RAILS", Rails::VERSION::STRING
       t = Transaction.create!(amount: 20, side: "credit")
       get "/avo/api/transactions/#{t.id}"
       expect(response).to have_http_status(:success)
