@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require "spec_helper"
-require "avo/api"
 
 class User
   include ActiveModel::Model
@@ -25,13 +24,15 @@ class Resource < Avo::BaseResource
   end
 end
 
-RSpec.describe "Resource#to_json" do
-  it "returns the right" do
-    resource = Resource.new.hydrate(record: User.new(id: 1, name: "Name"), view: :show).detect_fields
-    expect(JSON.parse(resource.to_json)).to eq({
-      "id" => 1,
-      "name" => "Name",
-      "formatted_name" => "Formatted Name",
-    })
+RSpec.describe "Avo::Api::Concerns::Serializable" do
+  describe "#as_json" do
+    it "returns the right fields" do
+      resource = Resource.new.hydrate(record: User.new(id: 1, name: "Name"), view: :show).detect_fields
+      expect(JSON.parse(resource.to_json)).to eq({
+        "id" => 1,
+        "name" => "Name",
+        "formatted_name" => "Formatted Name",
+      })
+    end
   end
 end
