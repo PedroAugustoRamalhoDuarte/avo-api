@@ -1,13 +1,34 @@
+inherit_gem:
+  switchcop: rubocop.yml
+
 AllCops:
-  TargetRubyVersion: 2.6
+  NewCops: enable
+  TargetRubyVersion: 3.3
+  Exclude:
+    - 'tmp/**/*'
+    - '**/*/bundle'
 
-Style/StringLiterals:
-  Enabled: true
-  EnforcedStyle: double_quotes
+Naming/FileName:
+  Enabled: false
 
-Style/StringLiteralsInInterpolation:
-  Enabled: true
-  EnforcedStyle: double_quotes
+Style/Documentation:
+  Enabled: false
 
 Layout/LineLength:
   Max: 120
+  Exclude: ["avo-api.gemspec"]
+
+Metrics/MethodLength:
+  Max: 17
+
+Metrics/AbcSize:
+  Max: 25
+
+RSpec/ExampleLength:
+  Max: 10
+
+RSpec/AnyInstance:
+  Enabled: false
+
+Metrics/BlockLength:
+  AllowedMethods: [ 'describe', 'context' ]

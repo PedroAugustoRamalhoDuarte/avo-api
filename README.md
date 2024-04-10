@@ -1,8 +1,14 @@
 # Avo::Api
 
-TODO: Delete this and the text below, and describe your gem
+POC (Proof of concept) to use AVO resources as base for an REST API;
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/avo/api`. To experiment with that code, run `bin/console` for an interactive prompt.
+## Testing
+
+To test the gem, you can use the following command:
+
+```bash
+ RUBYOPT='-rostruct' bundle exec rspec
+```
 
 ## Installation
 

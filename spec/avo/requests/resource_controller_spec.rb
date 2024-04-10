@@ -15,10 +15,10 @@ RSpec.describe "ResourceController", type: :request do
       t = Transaction.create!(amount: 20, side: "credit", id: 1)
       get "/avo/api/transactions/#{t.id}"
       expect(JSON.parse(response.body)).to eq({
-                                                "id" => 1,
-                                                "side" => "credit",
-                                                "amount" => 20
-                                              })
+        "id" => 1,
+        "side" => "credit",
+        "amount" => 20,
+      })
     end
   end
 end

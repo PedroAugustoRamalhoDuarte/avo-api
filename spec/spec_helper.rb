@@ -11,7 +11,6 @@ ENV["RAILS_ROOT"] ||= "#{File.dirname(__FILE__)}../../../spec/dummy"
 require "rspec/rails"
 require "database_cleaner"
 
-
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
   config.example_status_persistence_file_path = ".rspec_status"
@@ -23,7 +22,6 @@ RSpec.configure do |config|
     c.syntax = :expect
   end
 end
-
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

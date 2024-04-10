@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Avo::Resources::Transaction < Avo::BaseResource
   include Avo::Api::Concerns::Serializable
 

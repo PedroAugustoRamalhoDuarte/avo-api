@@ -2,6 +2,6 @@
 
 RSpec.describe Avo::Api do
   it "has a version number" do
-    expect(Avo::Api::VERSION).not_to be nil
+    expect(Avo::Api::VERSION).not_to be_nil
   end
 end
