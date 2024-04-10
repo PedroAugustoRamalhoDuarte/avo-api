@@ -2,7 +2,6 @@
 
 require "spec_helper"
 require "avo/api"
-#require "avo/api/concerns/serializable"
 
 class User
   include ActiveModel::Model

@@ -5,7 +5,7 @@ module Avo::Api
     module Serializable
       extend ::ActiveSupport::Concern
 
-      def as_json
+      def as_json(options = {})
         get_fields.map do |field|
           [field.id, field.value]
         end.to_h

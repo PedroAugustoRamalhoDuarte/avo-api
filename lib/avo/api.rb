@@ -9,3 +9,5 @@ module Avo
     # Your code goes here...
   end
 end
+
+# require "api/rails" if defined?(Rails)
